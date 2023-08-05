@@ -1,0 +1,103 @@
+.contact {
+    height: 100vh;
+    width: 100%;
+    background-image: url("../assets/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    >form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 80%;
+        width: 40%;
+        background-color: lightgray;
+        padding: 2rem;
+
+
+        >h2 {
+            font-size: 1.5rem;
+            font-family: "Roboto";
+            margin: 2rem 0;
+            text-transform: uppercase;
+        }
+
+        >input,
+        >textarea,
+        >button {
+            padding: 1rem;
+            outline: none;
+            border: 1px solid rgb(202, 202, 202);
+            margin: 0.5rem;
+            width: 60%;
+            border-radius: 20px;
+            opacity: 0.7;
+
+            &:focus {
+                opacity: 1;
+            }
+        }
+
+        >button {
+            width: 40%;
+            opacity: 0.85;
+            color: white;
+            background-color: black;
+            font-size: 1.2rem;
+            padding: 0.6rem;
+            transition: all 0.4s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+                color: white;
+                background-color: $red;
+            }
+        }
+
+    }
+
+    .contactFormBorder {
+        width: 200px;
+        height: 80%;
+        background-color: lightgray;
+        border-radius: 0 200px 200px 0;
+        position: relative;
+
+        >div {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 50%;
+            transform: translate(40%, -50%);
+            filter: drop-shadow(0 0 10px rgb(0, 0, 0, 5.665));
+
+            >img {
+                width: 120%;
+                height: 120%;
+            }
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width : 600px) {
+    .contact {
+        height: 70vh;
+
+        >form {
+            height: 100%;
+            width: 100%;
+        }
+
+        .contactFormBorder {
+            display: none;
+        }
+    }
+}

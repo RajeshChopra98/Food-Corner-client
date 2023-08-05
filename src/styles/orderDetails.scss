@@ -1,0 +1,107 @@
+.orderDetails {
+  background-color: $pink;
+  width: 100%;
+  height: 180vh;
+
+  main {
+    max-width: 1200px;
+    background-color: white;
+    margin: auto;
+    height: 100%;
+    padding: 2rem;
+    overflow: auto;
+
+    >table {
+      &:last-of-type {
+        margin: 2rem 0;
+      }
+
+      width: 100%;
+      text-align: center;
+
+      tr {
+        background-color: whitesmoke;
+      }
+
+      td,
+      th {
+        padding: 1rem;
+      }
+
+      th {
+        background-color: $dark;
+        color: white;
+        width: 30%;
+      }
+
+      td {
+        color: $dark;
+        width: 70%;
+
+        >img {
+          width: 30px;
+          height: 30px;
+          border-radius: 100%;
+        }
+
+        >a {
+          color: $red;
+        }
+
+        >button {
+          border: none;
+          cursor: pointer;
+          margin: 0.25rem;
+          color: $red;
+        }
+      }
+    }
+
+
+
+
+    >article {
+      >h1 {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        margin: 2rem 0;
+      }
+
+      >div {
+        background-color: rgb(246, 246, 246);
+        margin: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        border-radius: 5px;
+
+        >h4 {
+          font-weight: 200;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .orderDetails>main {
+   
+
+    >div {
+      >h1 {
+        font-size: 1.4rem;
+      }
+
+      >p {
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+        margin: 2rem 0;
+      }
+    }
+
+  }
+}

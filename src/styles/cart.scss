@@ -1,0 +1,96 @@
+.cart{
+    height: 100vh;
+    width: 100%;
+    background-color: $pink;
+
+
+    >main{
+        background-color: #eee;
+        height: 100%;
+        max-width: 900px;
+        margin: auto;
+        padding: 2rem;
+
+
+        >article{
+            padding: 2rem;
+
+            >div{
+                display: flex;
+                justify-content: space-between;
+                margin: 1rem 0;
+            }
+
+            >a{
+                background-color: $red;
+                color: white;
+                padding: 0.5rem 1rem;
+                border-radius: 8px;
+                text-align: center;
+                float: right;
+                margin-top: 2rem;
+            }
+        }
+    }
+}
+
+
+.cartItem{
+    background-color: rgb(246,246,246);
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 5px;
+
+    >div{
+        display: flex;
+        align-items: center;
+
+        >h4{
+            font-weight: 200px;
+            letter-spacing: 2px;
+        }
+
+        >img{
+            height: 70px;
+        }
+
+        >input{
+            text-align: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            padding: 0.5rem;
+            border: none;
+            margin: 0.5rem;
+            outline: none;
+            font-size: 1.3rem;
+            border-radius: 8px;
+            color: $red;
+
+            &::-webkit-inner-spin-button, &::-webkit-outer-spin-button{
+                -webkit-appearance: none;
+            }
+        }
+
+        >button{
+            cursor: pointer;
+            color: white;
+            background-color: $dark;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+
+@media screen and (max-width : 600px) {
+    .cart > main > article > a{
+        display: block;
+        float: none;
+        width: 100%;
+    }
+}
