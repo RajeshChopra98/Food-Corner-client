@@ -1,25 +1,26 @@
-import React from 'react';
-import {motion} from "framer-motion";
-import {FcGoogle} from "react-icons/fc";
+import React from "react";
+import { motion } from "framer-motion";
+import { FcGoogle } from "react-icons/fc";
+import { server } from "../../redux/store";
 
 const Login = () => {
-  return (
-    <section className='login'>
-        <motion.button
-            initial={{
-                y:"-100vh"
-            }}
+  const loginHandler = () => {
+    window.open(`${server}/googlelogin`, "_self");
+  };
 
-            animate={{
-                y:0
-            }}
-        >
-            Login with Google 
-            <FcGoogle />
-        </motion.button>
-        
+
+  return (
+    <section className="login">
+      <motion.button
+        initial={{ y: "-100vh" }}
+        animate={{ y: 0 }}
+        onClick={loginHandler}
+      >
+        Login with Google
+        <FcGoogle />
+      </motion.button>
     </section>
-  )
-}
+  );
+};
 
 export default Login;

@@ -44,7 +44,6 @@ const Home = () => {
       <Founder />
       <Menu />
     </>
-  )
-}
+)};
 
 export default Home;
